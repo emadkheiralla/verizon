@@ -1,0 +1,42 @@
+<div class="container" style="text-align:center;">
+  <br>
+  <br>
+  <h1 style="font-size: 90px; color: #BCBABB;">
+    St<span style="color: coral;">oo</span>gl<span style="color: coral">e</span>
+  </h1>
+  <br>
+  <img style="width:300px;" alt="Stack Overflow Logo" src="../assets/images/so-logo-s.jpg">
+  <br>
+  <br>
+  <input #ipt style="width:600px; padding:2px;" type="text" placeholder="Search Stack Overflow here...">&nbsp;
+  <button (click)="getQuestions()" class="btn btn-outline-secondary">Search</button>
+  <br>
+  <br>
+  <div class="row" [hidden]="!gridDataAvailable">
+    <div class="col-md-6">
+      <ag-grid-angular
+        id="myGrid"
+        style="text-align:left; width: 100%; height: 300px"
+        class="ag-theme-balham"
+        [rowData]="rowData"
+        [columnDefs]="columnDefs"
+        (gridReady)="onGridReady($event)"
+        pagination="true"
+        paginationAutoPageSize="true"
+        overlayNoRowsTemplate="<span style='padding: 10px;'>Search for your question above</span>'"
+      >
+      </ag-grid-angular>
+    </div>
+    <div class="col-md-6">
+      <div class="card" style="width:600px;">
+        <div style="text-align: left; padding-left: 15px;" class="card-header">
+          Question Details
+        </div>
+        <div class="card-body">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

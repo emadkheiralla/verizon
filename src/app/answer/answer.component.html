@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-4">
+    <img style="margin-left: 20px; margin-top: 25px; border: solid 2px coral; box-shadow: 0 0 10px coral;"
+         *ngIf="!param['data'].owner['profile_image']" class="card-img-top" src="../../assets/images/img_avatar1.png"
+         alt="Card image">
+    <img style="margin-left: 20px; margin-top: 25px; border: solid 2px coral; box-shadow: 0 0 10px coral;"
+         *ngIf="param['data'].owner['profile_image']" class="card-img-top" src="{{param['data'].owner['profile_image']}}"
+         alt="Card image">
+  </div>
+  <div class="col-md-8">
+      <h4 class="card-title">{{param['data'].owner['display_name']}}</h4>
+      <p style="text-align: left; padding-left: 110px" class="card-text">Score: {{param['data'].score}}</p>
+      <p style="text-align: left; padding-left: 110px" class="card-text">Tags: {{param['data'].tags}}</p>
+      <p style="text-align: left; padding-left: 110px" class="card-text">Views: {{param['data'].view_count}}</p>
+    <button type="button" class="btn btn-primary" (click)="openDialog()">Accepted Answer</button>
+  </div>
+</div>
+

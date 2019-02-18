@@ -1,0 +1,70 @@
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #F58023 !important;
+  border-color: #F08080 !important;
+  color: #F7F7F7 !important;
+}
+
+.btn-primary:hover {
+  color: #F7F7F7 !important;
+  background-color: #F08080 !important;
+  border-color: #F58023 !important;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  box-shadow: 0 0 0 0.2rem #F88379 !important;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  color: #fff !important;
+  background-color: #F08080 !important;
+  border-color: #F58023 !important;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff !important;
+  background-color: #F08080 !important;
+  border-color: #F58023 !important;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem #F88379 !important;
+}
+
+input:focus {
+  border: 2px solid coral !important;
+  box-shadow: 0 0 5px #F58023 !important;
+}
+
+img {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.card-header {
+  background-color: coral;
+  padding: 4px;
+  color: #fff;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-body {
+  height:280px;
+}
+
+.ag-header-cell{
+  background-color: #BCBABB;
+  color: #fff;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+
+
